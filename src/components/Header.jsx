@@ -35,6 +35,7 @@ const Header = () => {
             <img src={searchIcon} alt="Search" className="search-icon" /> {/* 아이콘 이미지 추가 */}
           </button>
         </div>
+        <div className='login-button'>Login</div>
       </nav>
     </header>
   );

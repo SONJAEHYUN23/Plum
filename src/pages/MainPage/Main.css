@@ -11,20 +11,69 @@
   }
 
   .drawer-menu{
-    margin-top: 70px;
+    margin-top: 120px;
   }
 
-  .left-drawer-home,.left-drawer-made,.left-drawer-recently,.left-drawer-popluar{
-    margin-left: 10px;
+  .left-drawer-made,.left-drawer-recently,.left-drawer-popular{
+    text-align: left;
+    margin-left: 30px;
     padding: 16px;
-    border-radius: 15px;
-    margin-top: 30px;
+    border-radius: 8px;
+    margin-top: 5px;
     width: 200px;
     height: 50px;
     cursor: pointer;
+    color: #8D8B8B;
+    font-weight: bold;
+    font-size: 15px;
+    
     &:hover {
         background-color: #272727;
+        color: white;
+      }
+      transition: 0.3s;
+  }
+
+  .left-drawer-home{
+    text-align: left;
+    margin-top: 15px;
+    margin-left: 30px;
+    font-weight: bold;
+  }
+
+  .left-drawer-library{
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 30px;
+    font-weight: bold;
+  }
+
+
+  .left-drawer-playlist,.left-drawer-liked,.left-drawer-artist{
+    text-align: left;
+    margin-left: 30px;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 5px;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    color: #8D8B8B;
+    font-weight: bold;
+    font-size: 15px;
+
+    
+    &:hover {
+        background-color: #272727;
+        color: white;
+
       }
       transition: 0.3s;
   }
   
+  .title-home{
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: -840px;
+    margin-top: -20px;
+  }
