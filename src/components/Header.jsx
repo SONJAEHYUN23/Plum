@@ -16,13 +16,12 @@ const Header = () => {
     }
   };
 
+  
+
   return (
-    <header className="header">
-      <nav className="container">
+    <div className="header">
         <div className='logo'>
-          <a href='/main'>
-            <img src={logo} alt='logo' />
-          </a>
+        <img src={logo} alt="Logo" />
         </div>
         <div className='search-bar'>
           <input
@@ -36,8 +35,7 @@ const Header = () => {
           </button>
         </div>
         <div className='login-button'>Login</div>
-      </nav>
-    </header>
+      </div>
   );
 };
 

@@ -1,0 +1,18 @@
+  /* 드로워 스타일 */
+  .drawer-left {
+    grid-area: drawer-left;
+    margin-top: 80px;
+    transition: 0.3s ease;
+  }
+  
+  .drawer-right {
+    grid-area: drawer-right;
+    transition: 0.3s ease;
+  }
+
+  .content-wrapper{
+    margin-top: 300px;
+  }
+
+
+ 
