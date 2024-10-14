@@ -26,18 +26,112 @@ const ToggleHeader = styled.header`
   z-index: 10; /* 드로어보다 위에 오도록 설정 */
 `;
 
+
+// 슬라이드 섹션 스타일
+const MadeSection = styled.section`
+  padding: 20px;
+  margin-top: 20px;
+  margin-left:260px
+`;
+
+// 슬라이드 리스트 스타일
+const MadeList = styled.div`
+  display: flex;
+  overflow-x: scroll;
+  gap: 20px;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #696969;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #1e1e1e;
+  }
+`;
+
+// 앨범(정사각형) 스타일
+const MadePlaylist = styled.div`
+  min-width: 200px;
+  height: 200px;
+  background-color: #333;
+  border-radius: 15px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+
+`;
+// 슬라이드 섹션 스타일
+const RecentlySection = styled.section`
+  padding: 20px;
+  margin-top: 20px;
+  margin-left:260px
+`;
+
+// 슬라이드 리스트 스타일
+const RecentlyList = styled.div`
+  display: flex;
+  overflow-x: scroll;
+  gap: 20px;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #696969;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #1e1e1e;
+  }
+`;
+
+// 앨범(정사각형) 스타일
+const RecentlyPlaylist = styled.div`
+  min-width: 180px;
+  height: 180px;
+  background-color: #333;
+  border-radius: 15px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+
+`;
+// 메인 콘텐츠 스타일
+const MainContent = styled.div`
+  color: white;
+`;
+
+
 // 왼쪽 드로어 스타일
 const LeftDrawer = styled.div`
   position: fixed;
-  left: ${(props) => (props.open ? "0" : "-366px")}; 
   top: 0;
-  width: 250px;
+  width: 200px;
   height: 100%;
   background-color: #191919;
   color: white;
   transition: 0.3s ease;
   padding: 20px;
+  left: ${(props) => (props.open ? "0" : "-366px")}; 
 `;
+//숨겨지는 효과 left: ${(props) => (props.open ? "0" : "-366px")}; 
 
 // 오른쪽 드로어 스타일
 const RightDrawer = styled.div`
@@ -80,11 +174,6 @@ const ProfileList = styled.ul`
     font-size:16px;
     font-weight:bold;
   }
-`;
-
-// 메인 콘텐츠 스타일
-const MainContent = styled.div`
-  color: white;
 `;
 
 // 왼쪽 드로어 토글 버튼 스타일
@@ -188,6 +277,25 @@ const Main = () => {
       {/* 메인 콘텐츠 */}
       <MainContent>
         <div className="title-home">Home</div>
+        <div className="made-title">맞춤추천</div>
+        <MadeSection className="made">
+          <MadeList className="made-list">
+            <MadePlaylist>Playlist 1</MadePlaylist>
+            <MadePlaylist>Playlist 2</MadePlaylist>
+            <MadePlaylist>Playlist 3</MadePlaylist>
+            <MadePlaylist>Playlist 4</MadePlaylist>
+          </MadeList>
+        </MadeSection>
+
+        <div className="recently-title">최근음악</div>
+        <RecentlySection className="made">
+          <RecentlyList className="Recently-list">
+            <RecentlyPlaylist>Playlist 1</RecentlyPlaylist>
+            <RecentlyPlaylist>Playlist 2</RecentlyPlaylist>
+            <RecentlyPlaylist>Playlist 3</RecentlyPlaylist>
+            <RecentlyPlaylist>Playlist 4</RecentlyPlaylist>
+          </RecentlyList>
+        </RecentlySection>
       </MainContent>
     </Container>
   );
