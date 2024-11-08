@@ -96,7 +96,9 @@ const LeftArrow = styled(ArrowButton)`
 const MainContent = styled.div`
   color: white;
   margin-top: -100px;
+
 `;
+
 
 const Main = () => {
   // useRef로 리스트 요소 참조
@@ -111,9 +113,15 @@ const Main = () => {
     }
   };
 
+  const songs = [
+    { albumImage: "https://via.placeholder.com/50" ,subtitle: "Song 1", singer:"noname", album: "Album 1", time: "3:45" },
+    { albumImage: "https://via.placeholder.com/50" ,subtitle: "Song 2", singer:"noname", album: "Album 2", time: "4:20" },
+    { albumImage: "https://via.placeholder.com/50" ,subtitle: "Song 3", singer:"noname", album: "Album 3", time: "5:15" },
+    // 필요에 따라 더 많은 노래 추가
+  ];
+
   return (
     <Container>
-      {/* 메인 콘텐츠 */}
       <MainContent>
         <div className="title-home">Home</div>
         <div className="made-title">맞춤추천</div>
@@ -152,11 +160,26 @@ const Main = () => {
         <div className="popular-title">인기차트</div>
         <Section>
           <div className="popular-bar">
-            <div className="popular-#">#</div>
+            <div className="popular-num">#</div>
             <div className="popular-subtitle">제목</div>
             <div className="popular-album">앨범</div>
             <div className="popular-time">시간</div>
           </div>
+          <hr className="divider" />
+          <div className="song-list">
+          {songs.map((song, index) => (
+            <div className="song-item" key={index}>
+              <div className="popularlist-num">{index + 1}</div>
+              <div className="popluarlist-albimcover">   
+                <img src={song.albumImage} alt={song.album} className="album-image" />
+                </div>
+                <div className="popularlist-subtitle">{song.subtitle}</div>
+                <div className="popularlist-singer">{song.singer}</div>
+              <div className="popularlist-album">{song.album}</div>
+              <div className="popularlist-time">{song.time}</div>
+            </div>
+          ))}
+        </div>
         </Section>
       </MainContent>
     </Container>

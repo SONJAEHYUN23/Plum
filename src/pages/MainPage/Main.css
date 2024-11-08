@@ -98,3 +98,88 @@
     margin-top: 100px;
     font-size: 20px;
   }
+
+  .popular-subtitle{
+    margin-left: 50px;
+    color: #696969;
+
+  }
+
+  .popular-album{
+    margin-left: 400px;
+  }
+
+
+  .popular-time{
+    margin-left: 380px;
+  }
+
+  .popular-bar{
+   display: flex;
+   color: #696969;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid #696969; /* 빨간색 */
+    width: 100%;
+    margin-top: 10px;
+  }
+
+   .song-item {
+    display: flex;
+    padding: 20px 10px;
+    /* justify-content: space-between; */
+  }
+  
+  .song-list {
+    margin-top: 20px;
+
+  }
+  .album-image {
+    width: 40px; /* 이미지 크기 (정사각형) */
+    height: 40px;
+    margin-right: 30px;
+    margin-left: 50px;
+    margin-top: -10px;
+    /* position: absolute; */
+    border-radius: 5px;
+    object-fit: cover; /* 이미지가 정사각형에 맞춰 잘리도록 설정 */
+  }
+
+  .popularlist-num{
+    margin-left: -10px;
+    position: absolute;
+    font-weight: bold;
+    color: #696969;
+
+  }
+  
+  .popularlist-album{
+    margin-left: 470px;
+    position: absolute;
+    color: #696969;
+   }
+
+   .popularlist-time{
+    margin-left: 880px;
+    position: absolute;
+    text-align: right;
+    color: #696969;
+    
+   }
+
+   .popularlist-subtitle{
+    position: absolute;
+    margin-left: 110px;
+    margin-top:-9px;
+   }
+  
+
+   .popularlist-singer{
+    position: absolute;
+    font-size: 14px;
+    margin-left: 110px;
+    margin-top: 15px;
+    color: #696969;
+   }
